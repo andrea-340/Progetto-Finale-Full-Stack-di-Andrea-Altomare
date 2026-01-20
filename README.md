@@ -37,40 +37,76 @@ TITAN-PROJECT/
 └── README.md                 # Documentazione del progetto
 
 
-## 🖥️ Guida all'avvio della Web App tramite Terminale
+# 🏋️‍♂️ TITAN | Training & Shop - Web App
+---
 
-Seguire i passaggi indicati di seguito per configurare l'ambiente ed eseguire l'applicazione localmente.
+## 🛠️ 1. Requisiti di Sistema e guida 
 
-### 1. Configurazione del Database (CLI)
-configurare il database direttamente tramite terminale MySQL:
+Assicurati di avere i seguenti componenti installati sul tuo computer:
+
+* **Java 17 JDK**: Necessario per compilare ed eseguire l'app (Verifica con `javac -version`).
+* **Maven**: Per la gestione delle dipendenze del backend.
+* **MySQL**: Per la persistenza dei dati.
+
+> **Nota per macOS:** Se visualizzi l'errore "No compiler is provided", imposta il percorso di Java aggiungendo `export JAVA_HOME=$(/usr/libexec/java_home -v 17)` nel tuo file `~.zshrc` e digita `source ~/.zshrc`.
+
+---
+
+## 🗄️ 2. Configurazione del Database
+
+### A. Installazione di MySQL (se mancante)
+Se non hai MySQL installato, puoi farlo rapidamente tramite terminale
+
+```
+
+Configura il database direttamente tramite la shell di MySQL:
 
 ```bash
-# Accedere a MySQL (inserire la password se configurata)
+# 1. Accedi a MySQL (inserisci la password se richiesta)
 mysql -u root -p
 
-# All'interno della shell MySQL, eseguire i seguenti comandi:
+# 2. All'interno della shell MySQL, esegui i seguenti comandi:
 CREATE DATABASE titandb;
 USE titandb;
-SOURCE percorso/assoluto/al/file/database.sql;
+
+# 3. Importa lo schema SQL (inserisci il percorso reale del tuo file)
+SOURCE /percorso/assoluto/al/file/database.sql;
+
+# 4. Esci dalla shell
 EXIT;
-2. Esecuzione del Backend (Java / Spring Boot)
 
-Navigare nella directory del server ed eseguire il comando appropriato in base al build tool utilizzato (Maven o Gradle):
+```
 
-Se si utilizza Maven:
+---
 
-Bash
+## 🚀 3. Esecuzione del Backend (Spring Boot)
+
+Naviga nella directory del server ed esegui il comando Maven per avviare l'applicazione:
+
+```bash
 cd progetto-titan-webapp-back
-./mvnw spring-boot:run
-Se si utilizza Gradle:
+mvn clean spring-boot:run
 
-Bash
-cd progetto-titan-webapp-back
-./gradlew bootRun
-3. Verifica e Accesso all'Applicazione
+```
 
-Una volta visualizzato il messaggio di log Started ... Application in X seconds, il sistema è operativo.
+Una volta visualizzato il messaggio di log `Started ... Application in X seconds`, il server backend sarà attivo all'indirizzo `http://localhost:8080`.
 
-Verifica Endpoint API: Navigare su http://localhost:8080/api/auth/login. La ricezione di un codice di stato (es. 405 Method Not Allowed) conferma che il server è in ascolto e risponde correttamente.
+---
 
-Accesso Frontend: L'interfaccia utente è raggiungibile al seguente indirizzo: 👉 http://localhost:8080/index.html
+## 🌐 4. Esecuzione del Frontend
+
+Per avviare l'interfaccia utente:
+
+1. Apri la cartella `progetto-titan-webapp-front` con **Visual Studio Code**.
+2. Avvia l'estensione **Live Server** (solitamente cliccando su "Go Live" in basso a destra).
+3. L'app sarà disponibile all'indirizzo `http://127.0.0.1:5500`.
+
+---
+
+## ✅ 5. Verifica Funzionamento
+
+* **Test API:** Visita `http://localhost:8080/api/auth/login`. Se ricevi una risposta (anche un errore 405), il server è correttamente in ascolto.
+* **Log Console:** Controlla la console del browser (F12) per verificare che non ci siano errori di caricamento per i file `style.css`, `api.js` e `main.js`.
+
+---
+
