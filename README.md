@@ -35,12 +35,14 @@ TITAN-PROJECT/
 │       └── schede-personalizzate/ # PDF scaricabili
 ├── database.sql              # Script di inizializzazione MySQL
 └── README.md                 # Documentazione del progetto
+
+
 ## 🖥️ Guida all'avvio della Web App tramite Terminale
 
 Seguire i passaggi indicati di seguito per configurare l'ambiente ed eseguire l'applicazione localmente.
 
 ### 1. Configurazione del Database (CLI)
-Se non si desidera utilizzare interfacce grafiche come phpMyAdmin, è possibile configurare il database direttamente tramite terminale MySQL:
+configurare il database direttamente tramite terminale MySQL:
 
 ```bash
 # Accedere a MySQL (inserire la password se configurata)
@@ -58,12 +60,12 @@ Navigare nella directory del server ed eseguire il comando appropriato in base a
 Se si utilizza Maven:
 
 Bash
-cd backend
+cd progetto-titan-webapp-back
 ./mvnw spring-boot:run
 Se si utilizza Gradle:
 
 Bash
-cd backend
+cd progetto-titan-webapp-back
 ./gradlew bootRun
 3. Verifica e Accesso all'Applicazione
 
