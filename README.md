@@ -35,41 +35,40 @@ TITAN-PROJECT/
 │       └── schede-personalizzate/ # PDF scaricabili
 ├── database.sql              # Script di inizializzazione MySQL
 └── README.md                 # Documentazione del progetto
-## GUIDA ALL'AVVIO DELLA WEB APP TRAMITE TERMINALE
-1. Configurazione Database (via Terminale)
+## 🖥️ Guida all'avvio della Web App tramite Terminale
 
-Se preferisci non usare l'interfaccia grafica di phpMyAdmin, puoi importare il DB direttamente così:
+Seguire i passaggi indicati di seguito per configurare l'ambiente ed eseguire l'applicazione localmente.
 
-Bash
-# Accedi a MySQL (ti verrà chiesta la password se impostata)
+### 1. Configurazione del Database (CLI)
+Se non si desidera utilizzare interfacce grafiche come phpMyAdmin, è possibile configurare il database direttamente tramite terminale MySQL:
+
+```bash
+# Accedere a MySQL (inserire la password se configurata)
 mysql -u root -p
 
-# Una volta dentro MySQL, crea il database e importa il file
+# All'interno della shell MySQL, eseguire i seguenti comandi:
 CREATE DATABASE titandb;
 USE titandb;
-SOURCE /percorso/verso/il/tuo/progetto/database.sql;
+SOURCE percorso/assoluto/al/file/database.sql;
 EXIT;
-2. Avvio del Backend (Java / Spring Boot)
+2. Esecuzione del Backend (Java / Spring Boot)
 
-Entra nella cartella del progetto e avvia il server. A seconda di cosa usi (Maven o Gradle), il comando è:
+Navigare nella directory del server ed eseguire il comando appropriato in base al build tool utilizzato (Maven o Gradle):
 
-Se usi Maven:
+Se si utilizza Maven:
 
 Bash
 cd backend
 ./mvnw spring-boot:run
-Se usi Gradle:
+Se si utilizza Gradle:
 
 Bash
 cd backend
 ./gradlew bootRun
-3. Verifica del Servizio
+3. Verifica e Accesso all'Applicazione
 
-Una volta che il terminale mostra il messaggio Started ... Application in X seconds, il server è pronto.
+Una volta visualizzato il messaggio di log Started ... Application in X seconds, il sistema è operativo.
 
-Controllo API: Apri il browser su http://localhost:8080/api/auth/login (dovrebbe darti un errore 405 o una pagina bianca, ma conferma che il server risponde).
+Verifica Endpoint API: Navigare su http://localhost:8080/api/auth/login. La ricezione di un codice di stato (es. 405 Method Not Allowed) conferma che il server è in ascolto e risponde correttamente.
 
-Apertura App: Vai su:
-
-Plaintext
-http://localhost:8080/index.html
+Accesso Frontend: L'interfaccia utente è raggiungibile al seguente indirizzo: 👉 http://localhost:8080/index.html
