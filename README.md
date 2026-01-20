@@ -50,7 +50,7 @@ Assicurati di avere i seguenti componenti installati sul tuo computer:
 * **Maven**: Per la gestione delle dipendenze del backend.
 * **MySQL**: Per la persistenza dei dati.
 
-> **Nota per macOS:** Se visualizzi l'errore "No compiler is provided", imposta il percorso di Java aggiungendo `export JAVA_HOME=$(/usr/libexec/java_home -v 17)` nel tuo file `~.zshrc` e digita `source ~/.zshrc`.
+
 
 ---
 
