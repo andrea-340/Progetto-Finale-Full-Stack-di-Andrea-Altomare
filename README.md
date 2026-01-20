@@ -35,3 +35,41 @@ TITAN-PROJECT/
 │       └── schede-personalizzate/ # PDF scaricabili
 ├── database.sql              # Script di inizializzazione MySQL
 └── README.md                 # Documentazione del progetto
+## GUIDA ALL'AVVIO DELLA WEB APP TRAMITE TERMINALE
+1. Configurazione Database (via Terminale)
+
+Se preferisci non usare l'interfaccia grafica di phpMyAdmin, puoi importare il DB direttamente così:
+
+Bash
+# Accedi a MySQL (ti verrà chiesta la password se impostata)
+mysql -u root -p
+
+# Una volta dentro MySQL, crea il database e importa il file
+CREATE DATABASE titandb;
+USE titandb;
+SOURCE /percorso/verso/il/tuo/progetto/database.sql;
+EXIT;
+2. Avvio del Backend (Java / Spring Boot)
+
+Entra nella cartella del progetto e avvia il server. A seconda di cosa usi (Maven o Gradle), il comando è:
+
+Se usi Maven:
+
+Bash
+cd backend
+./mvnw spring-boot:run
+Se usi Gradle:
+
+Bash
+cd backend
+./gradlew bootRun
+3. Verifica del Servizio
+
+Una volta che il terminale mostra il messaggio Started ... Application in X seconds, il server è pronto.
+
+Controllo API: Apri il browser su http://localhost:8080/api/auth/login (dovrebbe darti un errore 405 o una pagina bianca, ma conferma che il server risponde).
+
+Apertura App: Vai su:
+
+Plaintext
+http://localhost:8080/index.html
