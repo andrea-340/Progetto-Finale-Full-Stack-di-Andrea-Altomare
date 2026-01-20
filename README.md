@@ -36,7 +36,9 @@ TITAN-PROJECT/
 ├── database.sql              # Script di inizializzazione MySQL
 └── README.md                 # Documentazione del progetto
 
+⚠️ ATTENZIONE: CONFIGURAZIONE NECESSARIA
 
+SPOSTARE IL FILE index.html ALL'INTERNO DELLA CARTELLA progetto-titan-webapp-back (nella cartella dei file statici o come radice del front) PER ASSICURARE IL CORRETTO CARICAMENTO DEI PERCORSI.
 # 🏋️‍♂️ TITAN | Training & Shop - Web App
 ---
 
