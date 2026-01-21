@@ -17,7 +17,24 @@
 ---
 
 ## 🛠️ Configurazione e Avvio
+---
 
+### 🗄️ Configurazione Database (Obbligatorio)
+
+Prima di avviare il backend, è necessario creare lo schema del database in **MySQL**. Segui questi passaggi:
+
+1. Apri il tuo terminale MySQL o **phpMyAdmin**.
+2. Esegui il comando per creare il database:
+```sql
+CREATE DATABASE titan_db;
+
+```
+3. (Facoltativo) Se vuoi usare lo script già pronto, importa il file `database.sql` che trovi nella root del progetto:
+```bash
+mysql -u root -p titan_db < database.sql
+
+```
+**Nota:** Le credenziali di accesso (username e password) devono corrispondere a quelle scritte nel file `src/main/resources/application.properties` del backend.
 ### 1. Backend (Java Spring Boot)
 
 Entra nella cartella del backend ed esegui la build:
@@ -36,7 +53,7 @@ mvn spring-boot:run
 In un altro terminale, entra nella cartella frontend:
 
 ```bash
-cd titan-fitness
+cd progetto-titan-webapp-front
 npm install
 npm start
 
