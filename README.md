@@ -23,18 +23,16 @@
 
 Prima di avviare il backend, è necessario creare lo schema del database in **MySQL**. Segui questi passaggi:
 
-1. Apri il tuo terminale MySQL o **phpMyAdmin**.
+1. Apri il tuo terminale MySQL .
 2. Esegui il comando per creare il database:
 ```sql
+mysql -u root -p 
+```
+3. :
+```bash
 CREATE DATABASE titan_db;
 
 ```
-3. (Facoltativo) Se vuoi usare lo script già pronto, importa il file `database.sql` che trovi nella root del progetto:
-```bash
-mysql -u root -p titan_db < database.sql
-
-```
-**Nota:** Le credenziali di accesso (username e password) devono corrispondere a quelle scritte nel file `src/main/resources/application.properties` del backend.
 ### 1. Backend (Java Spring Boot)
 
 Entra nella cartella del backend ed esegui la build:
