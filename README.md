@@ -13,6 +13,26 @@
 * **Frontend:** JavaScript (ES6+), React 18, CSS3, Fetch API.
 * **Backend:** Java 17, Spring Boot 3.2.3, Spring Security, Maven.
 * **Database:** MySQL (Produzione) / H2 (Sviluppo).
+---
+🛡️ Area Amministrativa (Admin Panel)
+
+Il progetto include un'area gestionale dedicata agli amministratori per il controllo dei dati della piattaforma.
+
+A cosa serve:
+
+Gestione Utenti: Visualizzazione della lista completa degli atleti registrati su TITAN.
+
+Recruiting Hub: Monitoraggio delle candidature ricevute tramite la sezione "Lavora con Noi".
+
+Gestione Documentale: Possibilità di scaricare i CV (PDF) caricati dai candidati direttamente dal pannello.
+
+Monitoraggio delle registrazioni utenti.
+
+Come accedere:
+
+Assicurati che sia il Backend che il Frontend siano avviati.
+
+Apri il browser all'indirizzo: http://localhost:3000/admin.html
 
 ---
 
